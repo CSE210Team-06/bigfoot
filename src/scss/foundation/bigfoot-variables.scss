@@ -15,7 +15,7 @@
 
 // KEY VARIABLES
 // =============================================================================
-
+@use "sass:math";
 // STYLES
 $popover-width:                         22em !default;                           // Ideal width of the popover
 $popover-max-width:                     90% !default;                            // Best as a % to accommodate smaller viewports
@@ -30,7 +30,7 @@ $popover-bottom-position:               auto !default;                          
 $popover-left-position:                 auto !default;                           // Sets the left position of the popover. Use only when setting positionPopover to false in the script
 $popover-tooltip-size:                  1.3em !default;                          // Sets the side lengths of the tooltip
 $popover-scroll-indicator-width:        0.625em !default;                        // The width of the scroll indicator
-$popover-scroll-indicator-aspect-ratio: (15/12) !default;                        // The ratio of the height over the width of the scroll indicator
+$popover-scroll-indicator-aspect-ratio: math.div(15, 12) !default;                        // The ratio of the height over the width of the scroll indicator
 $popover-scroll-indicator-opacity:      0.1 !default;                            // The active opacity of scroll indicators
 $popover-initial-transform-state:       scale(0.1) translateZ(0) !default;       // The inital transform state for the popover
 $popover-active-transform-state:        scale(1) translateZ(0) !default;         // The transform state for the popover once it is fully activated
@@ -62,7 +62,7 @@ $popover-tooltip-background:                     $popover-color-background !defa
 $popover-tooltip-radius:                         0 !default;
 $popover-scroll-indicator-bottom-position:       0.45em !default;
 $popover-scrolly-fade-gradient-start-location:   50% !default;
-$popover-scroll-indicator-padding:               (($popover-padding-content-horizontal/2) - ($popover-scroll-indicator-width/2)) !default;
+$popover-scroll-indicator-padding: (math.div($popover-padding-content-horizontal, 2) - math.div($popover-scroll-indicator-width, 2)) !default;
 
 // TRANSITIONS
 $popover-transition-default-duration:            0.25s !default;
@@ -96,13 +96,14 @@ $popover-transition-default-timing-function:     ease !default;
 // KEY VARIABLES
 // =============================================================================
 
+//@use '../foundation/bigfoot-variables' as *;
 $button-height:                         0.95em !default;                         // The total height of the button
 $button-width:                          auto !default;                           // The total button width (applies only if $button-apply-dimensions is true)
 $button-inner-circle-size:              0.25em !default;                         // Total height/width of the ellipsis circles
 $button-border-radius:                  0.3em !default;                          // Border radius on the button itself
 $button-left-margin:                    0.2em !default;                          // Margin between the button and the text to its left
 $button-right-margin:                   0.1em !default;                          // Margin between the button and the text to its right
-$button-vertical-adjust:                -0.1em !default;                         // Pushes the buttons along the vertical axis to align it with text as desired
+$button-vertical-adjust: 0.2em;                         // Pushes the buttons along the vertical axis to align it with text as desired
 $button-inner-circle-left-margin:       1*$button-inner-circle-size !default;    // Space between the ellipsis circles
 
 $button-color:                          rgb(110, 110, 110) !default;             // Background color of the button

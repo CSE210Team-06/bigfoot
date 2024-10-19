@@ -32,7 +32,7 @@
 
 // @since 2.1.0
 // @author Chris Sauve
-
+@use '../foundation/bigfoot-variables' as *;
 .bigfoot-footnote {
   // POSITIONING
   position: absolute;

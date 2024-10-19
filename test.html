@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigfoot.js Test</title>
+    <link rel="stylesheet" href="dist/bigfoot-default.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .footnotes {
+    display: none;
+}
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .footnotes {
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+        .footnotes ol {
+            padding-left: 20px;
+        }
+        .footnotes li {
+            margin-bottom: 10px;
+        }
+        sup {
+            color: #3498db;
+        }
+
+        .bigfoot-footnote {
+        position: fixed !important;
+        top: 50% !important;
+        left: auto !important;
+        right: 1em !important;
+        bottom: auto !important;
+        transform: translateY(-50%) !important;
+        margin: 0 !important;
+        max-width: 300px !important;
+    }
+
+    .bigfoot-footnote__tooltip {
+        display: none;
+    }
+
+    .bigfoot-footnote.is-active {
+        transform: translateY(-50%) translateX(0) !important;
+    }
+
+    .bigfoot-footnote:not(.is-active) {
+        transform: translateY(-50%) translateX(100%) !important;
+    }
+
+    .bigfoot-footnote__content {
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+    }
+    </style>
+</head>
+<body>
+    <h1>Production is not our Problem</h1>
+
+    <p>For most human endeavor, the production of "things" is the hard part. It may take effort and ingenuity to design a car, an airliner, or a mobile phone, but taking that initial prototype design and idea into mass production is immensely more expensive and complicated.</p>
+    
+    <p>This is particularly true if we aim to do it with any kind of efficiency. As a result of these difficulties, we, products of the industrial age and industrial age thinking, automatically, almost unthinkingly, worry about this aspect, the production, of any significant task.</p>
+    
+    <p>The result of this, in software, has been that we have fairly consistently tried to apply "production-style thinking" to our industry. Waterfall<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> processes are production lines for software. They are the tools of mass production. They are not the tools of discovery, learning, and experimentation that are, or at least should be, at the heart of our profession.</p>
+    
+    <p>Unless we are foolish in our software development<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> choices, for us, production consists of triggering the build! It is automatic, push-button, immensely scalable and so cheap that it is best considered free. We can still make mistakes and get it wrong, but these are problems that are understood and well addressed by tools and technology.</p>
+    
+    <p>"Production" is not our problem. This makes our discipline unusual. It also makes it subject to easy misunderstanding and misapplied thinking and practices, because this ease of production is so unusual.</p>
+
+    <div class="footnotes">
+        <ol>
+            <li id="fn:1">
+                <p>Waterfall, as applied to software development, is a staged, sequential approach to organizing work by breaking it down into a series of distinct phases with well-defined handovers between each phase. The idea is that you tackle each phase in turn, rather than iterate. <a href="#fnref:1" rev="footnote">↩</a></p>
+            </li>
+            <li id="fn:2">
+                <p>Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components. It involves a planned and structured approach to creating software for a specific purpose. <a href="#fnref:2" rev="footnote">↩</a></p>
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/bigfoot.min.js"></script>
+    <script>
+        $.bigfoot();
+    </script>
+</body>
+</html>

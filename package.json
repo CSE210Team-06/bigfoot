@@ -1,18 +1,29 @@
 {
   "name": "bigfoot",
   "version": "2.1.4",
-  "main": "src/bigfoot.coffee",
+  "main": "dist/bigfoot.js",
   "description": "A jQuery plugin for empowering HTML footnotes.",
   "homepage": "http://www.bigfootjs.com",
+"scripts": {
+  "prebuild": "if not exist dist\\css mkdir dist\\css",
+  "build": "npm-run-all build:coffee build:sass concat:* uglify",
+  "build:coffee": "coffee -c -o dist/ src/",
+  "build:sass": "sass --no-source-map src/scss:dist/css",
+  "check:css": "dir dist\\css /s",
+  "check:js": "dir dist\\*.js",
+  "cat:css": "type dist\\bigfoot-default.css",
+  "cat:js": "type dist\\bigfoot.js",
+  "preoncat:css": "dir dist\\css /s",
+"concat:css": "type dist\\css\\base\\*.css dist\\css\\foundation\\*.css dist\\css\\variants\\*.css > dist\\bigfoot-default.css",
+  "concat:js": "type dist\\*.js > dist\\bigfoot.js",
+"uglify": "uglifyjs dist/bigfoot.js -c -m -o dist/bigfoot.min.js"
+},
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-autoprefixer": "~0.5.0",
-    "grunt-contrib-coffee": "^0.10.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-sass": "~0.8.0",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-watch": "~0.5.3",
-    "load-grunt-tasks": "~0.2.1"
+    "coffee-script": "^1.12.7",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.79.5",
+    "uglify-js": "^3.19.3"
   },
   "repository": {
     "type": "git",

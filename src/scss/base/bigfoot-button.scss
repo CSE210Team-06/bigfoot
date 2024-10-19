@@ -20,7 +20,8 @@
 
 // @since 2.1.0
 // @author Chris Sauve
-
+//@include print-styles;
+@use '../foundation/bigfoot-variables' as *;
 .bigfoot-footnote__button {
   // POSITIONING
   position: relative;
@@ -155,4 +156,4 @@
 //      \  \:\    \  \:\        \__\/     \  \:\          \__\/
 //       \__\/     \__\/                   \__\/
 
-@include print-styles;
+
