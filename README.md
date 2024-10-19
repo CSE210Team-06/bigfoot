@@ -16,7 +16,9 @@ This is an enhanced version of the original Bigfoot.js library, with several mod
 2. Install dependencies:
    ```bash
    npm install
-5. Use `npm run build` to build the project
+5. then run:
+   ```bash
+   npm run build
 
 ## Custom Styling
 
