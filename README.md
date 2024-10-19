@@ -31,3 +31,14 @@ If you're contributing to this project, please note that we're using npm scripts
 ## Original Bigfoot.js
 
 This project is based on the original Bigfoot.js library. For more information about the base functionality, please refer to the original documentation.
+
+## Output
+
+###Before
+![1111](https://github.com/user-attachments/assets/112c1d0e-fd8c-46fd-bf7e-db1f500081cd)
+![2222](https://github.com/user-attachments/assets/c148eefb-b26e-4c36-b1b5-65044b122aa0)
+
+##
+###After
+![3333](https://github.com/user-attachments/assets/66b56bb5-2a17-4d93-b52b-428577f5cc39)
+![4444](https://github.com/user-attachments/assets/bb648a99-c54b-409a-b088-45b464a2a040)
