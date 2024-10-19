@@ -1,21 +1,29 @@
-# bigfoot.js
+# bigfoot.js prepared by team 6
 
-by [Chris Sauve](http://cmsauve.com/projects)
+This is an enhanced version of the original Bigfoot.js library, with several modifications to improve functionality and appearance.
 
-Bigfoot is a jQuery plugin that creates exceptional footnotes. Simply include the code on your pages and footnotes will be detected automatically and improved in the following ways:
+## Key Changes
 
-- Links to footnotes will be replaced with clickable/ tappable buttons, making them substantially easier to hit.
+1. **Build Process**: Replaced Grunt with npm for a more modern build workflow. The `package.json` file has been updated to reflect these changes.
 
-- Footnote content will appear in a popover directly beside the footnote button when it is clicked/ tapped, which cuts out the annoying bouncing around the page that footnotes typically result in.
+2. **Styling**: Modified the CSS to change the appearance of footnotes. The new style provides a cleaner, more modern look that better integrates with contemporary web designs.
 
-- The active popovers will be resized and repositioned to ensure that they continue to be completely visible on-screen and aesthetically pleasing: this makes it perfect for mobile devices and responsive designs.
+3. **Footnote Behavior**: Altered the footnote display behavior. Now, footnotes appear from the side of the page for each tab, providing a smoother and less intrusive user experience.
 
-This project includes both the script itself and a default style to apply to the footnote button/ content that are eventually generated. There are also a variety of additional styles that illustrate some of the possibilities for styling these components.
+## How to Use
 
-The script has many configurable options from having popovers instantiated on hover, to allowing multiple active footnotes, to setting specific timeouts for popover creation/ deletion. It also returns an object that allows you to activate, remove, add breakpoints, and reposition popovers properly. All of these options and return functions are shown in detail at the script's [project page](http://www.bigfootjs.com/). You can also see a [demo of the project in action](http://www.bigfootjs.com/#demo) on the same page.
+1. Clone this repository
+2. Run `npm install` to install dependencies
+3. Use `npm run build` to build the project
 
-Requires jQuery 1.7+ at a minimum (for `.on()`) and jQuery 1.8+ for full functionality (1.8 automatically prefixes the `transform`/ `transition` properties).
+## Custom Styling
 
-*Note:* Bigfoot is currently incompatible with jQuery 3.0+ (see [#54](https://github.com/lemonmade/bigfoot/issues/54))
+The footnotes now slide in from the side of the page. This is achieved through CSS modifications in the `bigfoot-default.css` file. You can further customize this behavior by adjusting the CSS rules.
 
-Questions? Issues? Feature requests? Check out the [Github page](https://github.com/lemonmade/bigfoot) for this project.
+## Notes for Contributors
+
+If you're contributing to this project, please note that we're using npm scripts instead of Grunt. Familiarize yourself with the scripts section in `package.json` before making changes.
+
+## Original Bigfoot.js
+
+This project is based on the original Bigfoot.js library. For more information about the base functionality, please refer to the original documentation.
