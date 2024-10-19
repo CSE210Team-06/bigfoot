@@ -13,8 +13,10 @@ This is an enhanced version of the original Bigfoot.js library, with several mod
 ## How to Use
 
 1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Use `npm run build` to build the project
+2. Install dependencies
+   '''bash
+   npm install
+5. Use `npm run build` to build the project
 
 ## Custom Styling
 
